@@ -2,35 +2,59 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-class Program
+namespace RainFallApi
 {
-    static async Task Main()
+    class Program
     {
-        string apiUrl = "http://environment.data.gov.uk/flood-monitoring/id/stations/{id}/measures";
-        string stationId = "026090"; // Replace with the actual station ID
-
-        using (HttpClient client = new HttpClient())
+        static async Task Main()
         {
+            // Replace {id} with the actual station ID
+            string stationId = "026090";
+
+            // Create an instance of the application
+            var app = new RainFallApi(new HttpClient());
+
+            // Call the method to get and display the data
+            await app.Run(stationId);
+        }
+    }
+
+    public class RainFallApi
+    {
+        private readonly HttpClient _httpClient;
+
+        public RainFallApi(HttpClient httpClient)
+        {
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
+        }
+
+        public async Task Run(string stationId)
+        {
+            // Replace the base URL with the correct one
+            string apiUrl = $"http://environment.data.gov.uk/flood-monitoring/id/stations/{stationId}/measures";
+
             try
             {
-                // Make the GET request
-                HttpResponseMessage response = await client.GetAsync(apiUrl.Replace("{id}", stationId));
-
-                // Check if the request was successful
-                if (response.IsSuccessStatusCode)
-                {
-                    // Read and output the response content
-                    string responseData = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine(responseData);
-                }
-                else
-                {
-                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                }
+                string result = await GetData(apiUrl);
+                Console.WriteLine(result);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Exception: {ex.Message}");
+            }
+        }
+
+        private async Task<string> GetData(string apiUrl)
+        {
+            HttpResponseMessage response = await _httpClient.GetAsync(apiUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                return await response.Content.ReadAsStringAsync();
+            }
+            else
+            {
+                throw new HttpRequestException($"Error: {response.StatusCode} - {response.ReasonPhrase}");
             }
         }
     }
