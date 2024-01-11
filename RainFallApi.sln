@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RainfallApiClient", "RainfallApiClient\RainfallApiClient.csproj", "{779DADFB-A5BD-4888-9B6F-DB7194E3CF56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Core", "RainfallApi.Core\RainfallApi.Core.csproj", "{4EAA07B3-EEC9-4401-A5AC-556E5C9563F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Infrastructure", "RainfallApi.Infrastructure\RainfallApi.Infrastructure.csproj", "{063BF28E-090D-47C1-B93F-94B205E28100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Application.Tests", "RainfallApi.Application.Tests\RainfallApi.Application.Tests.csproj", "{1C885069-F7E4-40C9-AB08-6FF99320D5F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Application", "RainfallApi.Application\RainfallApi.Application.csproj", "{F5D61894-2C42-4715-87F0-7F18827441B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RainfallApi.Web", "RainfallApi.Web\RainfallApi.Web.csproj", "{F07805DE-B4A8-4187-90CB-A129912046A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{779DADFB-A5BD-4888-9B6F-DB7194E3CF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{779DADFB-A5BD-4888-9B6F-DB7194E3CF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{779DADFB-A5BD-4888-9B6F-DB7194E3CF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{779DADFB-A5BD-4888-9B6F-DB7194E3CF56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EAA07B3-EEC9-4401-A5AC-556E5C9563F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAA07B3-EEC9-4401-A5AC-556E5C9563F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAA07B3-EEC9-4401-A5AC-556E5C9563F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAA07B3-EEC9-4401-A5AC-556E5C9563F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063BF28E-090D-47C1-B93F-94B205E28100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063BF28E-090D-47C1-B93F-94B205E28100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063BF28E-090D-47C1-B93F-94B205E28100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063BF28E-090D-47C1-B93F-94B205E28100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FFE211E-5960-434F-AA20-6C107FCB3EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FFE211E-5960-434F-AA20-6C107FCB3EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FFE211E-5960-434F-AA20-6C107FCB3EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FFE211E-5960-434F-AA20-6C107FCB3EBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C885069-F7E4-40C9-AB08-6FF99320D5F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C885069-F7E4-40C9-AB08-6FF99320D5F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C885069-F7E4-40C9-AB08-6FF99320D5F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C885069-F7E4-40C9-AB08-6FF99320D5F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5D61894-2C42-4715-87F0-7F18827441B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5D61894-2C42-4715-87F0-7F18827441B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5D61894-2C42-4715-87F0-7F18827441B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5D61894-2C42-4715-87F0-7F18827441B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F07805DE-B4A8-4187-90CB-A129912046A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07805DE-B4A8-4187-90CB-A129912046A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07805DE-B4A8-4187-90CB-A129912046A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07805DE-B4A8-4187-90CB-A129912046A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
