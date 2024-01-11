@@ -46,7 +46,7 @@ The API provides endpoints for fetching rainfall readings based on station ID. Y
 
 ## API Documentation
 The API documentation is generated using Swagger and can be accessed at http://localhost:3000/swagger.
-
+(Swagger currently not working will update this soon)
 ## Project Structure
 The project is organized into layers following Clean Architecture principles:
 
@@ -62,3 +62,6 @@ ASP.NET Core 3.1
 Entity Framework Core
 Swashbuckle.AspNetCore for API documentation
 Moq and xUnit for testing
+
+**Side Note
+The project was code in Visual Studio Code for MacOS. not tested in Windows Environment nore in Visual studio for windows.
