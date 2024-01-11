@@ -58,7 +58,7 @@ RainfallApi.Web: The web layer responsible for handling HTTP requests and presen
 ## Dependencies
 The project uses the following key dependencies:
 
-ASP.NET Core 3.1
+ASP.NET Core 8
 Entity Framework Core
 Swashbuckle.AspNetCore for API documentation
 Moq and xUnit for testing
