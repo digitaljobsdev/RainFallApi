@@ -64,4 +64,4 @@ Swashbuckle.AspNetCore for API documentation
 Moq and xUnit for testing
 
 **Side Note
-The project was code in Visual Studio Code for MacOS. not tested in Windows Environment nore in Visual studio for windows.
+The project was code in Visual Studio Code for MacOS. not tested in Windows Environment nor in Visual studio for windows.
