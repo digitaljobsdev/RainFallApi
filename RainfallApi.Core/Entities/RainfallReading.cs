@@ -2,9 +2,8 @@
 {
     public class RainfallReading
     {
-        public string DateMeasured { get; set; }
-        public double AmountMeasured { get; set; }
+        public string dateMeasured { get; set; }
+        public double amountMeasured { get; set; }
 
-        public string StationId { get; set; }
     }
 }

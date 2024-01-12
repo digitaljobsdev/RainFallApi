@@ -1,11 +1,11 @@
-﻿using RainfallApi.Application.Interfaces;
-using RainfallApi.Application.Exceptions;
-using RainfallApi;
+﻿
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using RainfallApi.Application.Interfaces;
+using RainfallApi.Application.Exceptions;
 
-namespace RainfallApi.Infrastructure
+namespace RainfallApi.Application.Services
 {
     public class ExternalApiService : IExternalApiService
     {

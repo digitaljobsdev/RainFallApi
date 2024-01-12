@@ -39,10 +39,11 @@ namespace RainfallApi.Application.Services
 
                 // Parse the JSON response into FloodMonitoringResponse using Newtonsoft.Json
                 var response = JsonConvert.DeserializeObject<FloodMonitoringResponse>(result);
-
+                Console.WriteLine($"Response API: {response.ToString}");
                 // Convert the response to your RainfallReadingResponse model
                 var rainfallReadingResponse = new RainfallReadingResponse
                 {
+                    
                     Readings = MapToFloodReadings(response.Items)
                 };
 
@@ -74,8 +75,8 @@ namespace RainfallApi.Application.Services
                 {
                     var rainfallReading = new RainfallReading
                     {
-                        DateMeasured = latestReading.Date, // Convert DateTime to string
-                        AmountMeasured = latestReading.Value
+                        dateMeasured = latestReading.dateTime, // Convert DateTime to string
+                        amountMeasured = latestReading.value
                     };
 
                     rainfallReadings.Add(rainfallReading);

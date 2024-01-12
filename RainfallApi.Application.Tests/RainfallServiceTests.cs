@@ -36,8 +36,8 @@ namespace RainfallApi.Application.Tests
                     {
                         LatestReading = new LatestReading
                         {
-                            Date = "2024-01-10",
-                            Value = 15.2
+                            dateTime = "2024-01-10",
+                            value = 15.2
                         }
                     }
                 }
@@ -60,8 +60,8 @@ namespace RainfallApi.Application.Tests
 
             // Assuming you have a proper implementation of mapping logic, check the mapped values
             var firstReading = Assert.Single(result.Readings);
-            Assert.Equal("2024-01-10", firstReading.DateMeasured);
-            Assert.Equal(15.2, firstReading.AmountMeasured);
+            Assert.Equal("2024-01-10", firstReading.dateMeasured);
+            Assert.Equal(15.2, firstReading.amountMeasured);
 
             // Verify that GetData method on IExternalApiService is called with the correct URL
             mockExternalApiService.Verify(service =>

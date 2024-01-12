@@ -20,11 +20,11 @@ public class RainfallRepository : IRainfallRepository
         };
     }
 
-    public async Task<IEnumerable<RainfallReading>> GetReadingsAsync(string stationId, int count)
+    public async Task<IEnumerable<RainfallReading>> GetReadingsAsync(string stationId)
     {
         // Implement logic to retrieve data from your data storage
         // For this example, we're using an in-memory list
-        return _data.Where(r => r.StationId == stationId).OrderByDescending(r => r.DateMeasured).Take(count);
+        return _data;
     }
 
     Task<List<RainfallReading>> IRainfallRepository.GetReadingsAsync(string stationId, int count)

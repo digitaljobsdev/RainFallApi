@@ -14,7 +14,7 @@ public class Item
 
 public class LatestReading
 {
-    public string Date { get; set; }
-    public double Value { get; set; }
+    public string dateTime { get; set; }
+    public double value { get; set; }
     // Add other properties as needed
 }
