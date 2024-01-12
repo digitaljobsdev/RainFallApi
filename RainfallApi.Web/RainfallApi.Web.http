@@ -1,6 +1,5 @@
-@RainfallApi.Web_HostAddress = http://localhost:5105
+@RainfallApi.Web_HostAddress = http://localhost:3000
 
-GET {{RainfallApi.Web_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###

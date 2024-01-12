@@ -1,7 +1,6 @@
 
 using Microsoft.AspNetCore.Mvc;
-using RainfallApi.Application.Services;
-//using RainfallApi.Core.Models;
+using RainfallApi.Application.Interfaces;
 using System.Threading.Tasks;
 
 namespace RainfallApi.Web.Controllers
@@ -14,14 +13,14 @@ namespace RainfallApi.Web.Controllers
 
         public RainfallController(IRainfallService rainfallService)
         {
-            _rainfallService = rainfallService;
+            _rainfallService = rainfallService ?? throw new ArgumentNullException(nameof(rainfallService));
         }
 
-        [HttpGet("/rainfall/id/{stationId}/readings")]
+        [HttpGet("id/{stationId}/readings")]
         public async Task<ActionResult<RainfallReadingResponse>> GetRainfallReadings(string stationId, [FromQuery] int count = 10)
         {
             var result = await _rainfallService.GetRainfallReadingsAsync(stationId, count);
-            return Ok(result);
+            return result;
         }
     }
 }
